@@ -1,0 +1,6 @@
+#ifndef LAGRANGEPOLYNOMIAL_HPP
+#define LAGRANGEPOLYNOMIAL_HPP
+
+
+
+#endif
