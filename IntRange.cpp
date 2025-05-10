@@ -38,3 +38,7 @@ Rhea::IntRange::Iterator Rhea::IntRange::begin() const {
 Rhea::IntRange::Iterator Rhea::IntRange::end() const {
     return Iterator(_right, _step);
 }
+
+int Rhea::IntRange::left() const {
+    return _left;
+}
