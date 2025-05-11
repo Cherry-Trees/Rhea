@@ -34,6 +34,10 @@ int Rhea::Vector2Int::y() const {
     return _y;
 }
 
+Rhea::Vector2Int Rhea::Vector2Int::operator-() const {
+    return Vector2Int(-_x, -_y);
+}
+
 Rhea::Vector2Int &Rhea::Vector2Int::operator+=(const Rhea::Vector2Int &other) {
     _x += other._x;
     _y += other._y;
@@ -137,7 +141,7 @@ Rhea::Vector2Int Rhea::operator+(const int value, const Rhea::Vector2Int &vector
 }
 
 Rhea::Vector2Int Rhea::operator-(const int value, const Rhea::Vector2Int &vector) {
-    return vector - value;
+    return Vector2Int(value - vector.x(), value - vector.y());
 }
 
 Rhea::Vector2Int Rhea::operator*(const int value, const Rhea::Vector2Int &vector) {
@@ -145,5 +149,5 @@ Rhea::Vector2Int Rhea::operator*(const int value, const Rhea::Vector2Int &vector
 }
 
 Rhea::Vector2Int Rhea::operator/(const int value, const Rhea::Vector2Int &vector) {
-    return vector / value;
+    return Vector2Int(value / vector.x(), value / vector.y());
 }

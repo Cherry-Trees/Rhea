@@ -25,6 +25,8 @@ namespace Rhea {
             int &y();
             int y() const;
 
+            Vector2Int operator-() const;
+
             Vector2Int &operator+=(const Vector2Int &other);
             Vector2Int &operator+=(const int value);
 

@@ -43,7 +43,7 @@ int main() {
 
     Vector2Int v(4, -9);
 
-    v += 99;
+    v = v + 6;
     
     cout << v.x() << ", " << v.y() << endl;
 
