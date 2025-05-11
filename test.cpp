@@ -47,8 +47,17 @@ int main() {
     
     cout << v.x() << ", " << v.y() << endl;
 
-    for (int i: Range(0, -10))
+    Range x(0, 10);
+
+    for (int &i: x) {
+        i += 2;
         cout << i << endl;
+    }
+
+    for (int &i: x) {
+        i += 2;
+        cout << i << endl;
+    }
 
 
 
