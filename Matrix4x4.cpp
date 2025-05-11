@@ -1,4 +1,4 @@
-#include "include/Linear/Matrix4x4.hpp"
+#include "include/Tensors/Matrix4x4.hpp"
 
 Rhea::Matrix4x4::Matrix4x4(): std::array<std::array<double, 4>, 4>() {}
 
