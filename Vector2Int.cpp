@@ -131,3 +131,19 @@ int Rhea::Vector2Int::operator[](const int idx) const {
             throw std::out_of_range("Max index for Vector2Int is 1");
     }
 }
+
+Rhea::Vector2Int Rhea::operator+(const int value, const Rhea::Vector2Int &vector) {
+    return vector + value;
+}
+
+Rhea::Vector2Int Rhea::operator-(const int value, const Rhea::Vector2Int &vector) {
+    return vector - value;
+}
+
+Rhea::Vector2Int Rhea::operator*(const int value, const Rhea::Vector2Int &vector) {
+    return vector * value;
+}
+
+Rhea::Vector2Int Rhea::operator/(const int value, const Rhea::Vector2Int &vector) {
+    return vector / value;
+}

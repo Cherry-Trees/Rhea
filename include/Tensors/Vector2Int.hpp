@@ -54,6 +54,12 @@ namespace Rhea {
 
     };
 
+
+    Vector2Int operator+(const int value, const Vector2Int &vector);
+    Vector2Int operator-(const int value, const Vector2Int &vector);
+    Vector2Int operator*(const int value, const Vector2Int &vector);
+    Vector2Int operator/(const int value, const Vector2Int &vector);
+
 }
 
 #endif
