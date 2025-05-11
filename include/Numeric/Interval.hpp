@@ -1,11 +1,11 @@
-#ifndef RANGEFLOAT_HPP
-#define RANGEFLOAT_HPP
+#ifndef INTERVAL_HPP
+#define INTERVAL_HPP
 
 #include <cstdlib>
 
 namespace Rhea {
 
-    class RangeFloat {
+    class Interval {
 
         private:
 
@@ -13,8 +13,11 @@ namespace Rhea {
 
         public:
 
-            RangeFloat(const double left, const double right);
-            RangeFloat(const RangeFloat &other);
+            Interval(const double left, const double right);
+            Interval(const Interval &other);
+
+            static Interval empty();
+            static Interval universe();
 
             double &left();
             double left() const;
@@ -28,9 +31,14 @@ namespace Rhea {
             double max() const;
             int direction() const;
 
-            
-            
+            bool contains(const double value) const;
+            bool surrounds(const double value) const;
 
+            double clamp(const double value) const;
+
+            
+            
+            
 
 
     };

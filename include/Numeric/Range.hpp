@@ -1,15 +1,15 @@
-#ifndef RANGEINT_HPP
-#define RANGEINT_HPP
+#ifndef RANGE_HPP
+#define RANGE_HPP
 
 #include <cstdlib>
 
 namespace Rhea {
 
-    class RangeInt {
+    class Range {
 
         private:
 
-            int _left, _right, _step;
+            int _start, _stop, _step;
 
         public:
 
@@ -31,16 +31,16 @@ namespace Rhea {
                     bool operator!=(const Iterator &other) const;
             };
 
-            RangeInt(const int left, const int right, const int step = 1);
-            RangeInt(const RangeInt &other);
+            Range(const int left, const int right, const int step = 1);
+            Range(const Range &other);
 
-            RangeInt &operator=(const RangeInt &other);
+            Range &operator=(const Range &other);
 
-            int &left();
-            int left() const;
+            int &start();
+            int start() const;
 
-            int &right();
-            int right() const;
+            int &stop();
+            int stop() const;
 
             int &step();
             int step() const;
@@ -49,7 +49,7 @@ namespace Rhea {
             int direction() const;
             int min() const;
             int max() const;
-            RangeInt &swap();
+            Range &swap();
             bool contains(const int value) const;
 
             Iterator begin() const;

@@ -41,7 +41,7 @@ int main() {
         13,14,15,16
     );
 
-    Vector2Int v(4, -9);
+    Rhea::Vector2Int v(4, -9);
 
     v = v + 6;
     
