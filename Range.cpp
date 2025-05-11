@@ -48,7 +48,7 @@ bool Rhea::Range::Iterator::operator==(const Rhea::Range::Iterator &other) const
     return _at == other._at;
 }
 bool Rhea::Range::Iterator::operator!=(const Rhea::Range::Iterator &other) const {
-    return _at < other._at;
+    return _step > 0? _at < other._at: _at > other._at;
 }
 
 int &Rhea::Range::start() {

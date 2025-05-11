@@ -1,7 +1,7 @@
 #include <array>
 #include <iostream>
 #include "include/Tensors/Matrix4x4.hpp"
-#include "include/Numeric/RangeInt.hpp"
+#include "include/Numeric/Range.hpp"
 #include "include/Tensors/Vector2Int.hpp"
 
 using namespace Rhea;
@@ -46,6 +46,9 @@ int main() {
     v = v + 6;
     
     cout << v.x() << ", " << v.y() << endl;
+
+    for (int i: Range(0, -10))
+        cout << i << endl;
 
 
 
