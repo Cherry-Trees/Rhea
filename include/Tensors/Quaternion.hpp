@@ -2,6 +2,7 @@
 #define QUATERNION_HPP
 
 #include <cmath>
+#include <stdexcept>
 #include "Vector3.hpp"
 #include "../Enums/Axis.hpp"
 
@@ -59,12 +60,13 @@ namespace Rhea {
 
             Quaternion operator-() const;
             Quaternion operator*() const;
-            Quaternion &operator+(const Quaternion &other);
-            Quaternion &operator-(const Quaternion &other);
-            Quaternion &operator*(const Quaternion &other);
+            Quaternion operator+(const Quaternion &other) const;
+            Quaternion operator-(const Quaternion &other) const;
+            Quaternion operator*(const Quaternion &other) const;
 
-            Quaternion &operator*(const double scalar);
-            Quaternion &operator/(const double scalar);
+            Quaternion operator*(const double scalar) const;
+            Quaternion operator/(const double scalar) const;
+            
     };
 
 }
